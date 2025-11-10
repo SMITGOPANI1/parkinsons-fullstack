@@ -1,0 +1,9 @@
+Flask==2.3.2
+flask-cors==3.0.10
+numpy
+scipy
+librosa
+soundfile
+pydub
+scikit-learn
+joblib

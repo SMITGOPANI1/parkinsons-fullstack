@@ -1,0 +1,153 @@
+/* Full-page gradient background that allows scrolling */
+.detect-page {
+  min-height: 100vh; /* use min-height instead of fixed height */
+  width: 100vw;
+  background: radial-gradient(circle at top left, #182848, #0f2027);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* start at top */
+  color: #f5f5f5;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  padding: 60px 0; /* spacing at top & bottom for scroll comfort */
+  overflow-y: auto; /* make it scrollable */
+}
+
+/* Main panel */
+.detect-panel {
+  width: 800px;
+  background: rgba(15, 20, 40, 0.95);
+  border-radius: 16px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: 0.3s ease-in-out;
+}
+
+/* Headline */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons and controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.record-btn {
+  background: linear-gradient(90deg, #00c853, #00e676);
+}
+.record-btn:hover {
+  transform: scale(1.05);
+}
+
+.stop-btn {
+  background: linear-gradient(90deg, #e53935, #ef5350);
+}
+.stop-btn:hover {
+  transform: scale(1.05);
+}
+
+.predict-btn {
+  background: linear-gradient(90deg, #3f51b5, #5c6bc0);
+}
+.predict-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Audio player */
+.audio-box {
+  margin-bottom: 15px;
+}
+audio {
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  background: #111;
+}
+
+/* Result box (prediction output) */
+.result-box {
+  background: rgba(20, 25, 40, 0.85);
+  border: 2px solid #27ae60;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-top: 25px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  transition: 0.4s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.result-line strong {
+  color: #fff;
+}
+
+.result-box.red {
+  border-color: #e74c3c;
+  color: #ff6b6b;
+  background: rgba(40, 10, 10, 0.85);
+}
+
+.result-box.green {
+  border-color: #27ae60;
+  color: #2ecc71;
+  background: rgba(10, 25, 10, 0.85);
+}
+
+/* Recordings list section */
+.list-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 30px 0 10px;
+}
+
+.recordings-list {
+  text-align: left;
+  max-height: 180px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recording-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+}
+
+.recording-item:last-child {
+  border-bottom: none;
+}
+
+.recording-item a {
+  color: #82b1ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.recording-item a:hover {
+  color: #bbdefb;
+}
