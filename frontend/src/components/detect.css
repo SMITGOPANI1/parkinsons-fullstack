@@ -1,4 +1,4 @@
-/* Full-page gradient background that allows scrolling */
+Full-page gradient background that allows scrolling
 .detect-page {
   min-height: 100vh; /* use min-height instead of fixed height */
   width: 100vw;
@@ -11,6 +11,28 @@
   padding: 60px 0; /* spacing at top & bottom for scroll comfort */
   overflow-y: auto; /* make it scrollable */
 }
+
+.upload-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #7c4dff, #6200ea);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.upload-label:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #6200ea, #7c4dff);
+}
+
 
 /* Main panel */
 .detect-panel {
